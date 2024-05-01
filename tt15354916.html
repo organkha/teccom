@@ -1,1 +1,25 @@
-gf
+<div id="IndStreamPlayer" style="display: flex; max-width:100%; max-height:100%;"></div>
+
+<script>
+  const IndStreamPlayerConfigs = {
+    width: 800,
+    height: 400,
+    id: 'IndStreamPlayer',
+    tr: false
+  };
+
+  // Get the current URL
+  const currentUrl = window.location.href;
+
+  // Extract the desired value from the URL (assuming it's the last part)
+  const value = currentUrl.split('/').pop();
+
+  // Construct the complete URL by prepending the base URL (modify as needed)
+  const baseUrl = "https://teccom-teccom.top/"; // Replace with your actual base URL
+  const completeUrl = baseUrl + value;
+
+  // Set the src attribute of the script element dynamically
+  document.getElementById('IndStreamPlayer').setAttribute('src', completeUrl);
+</script>
+
+<script src="https://awsind.site/player.js"></script>
